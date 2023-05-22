@@ -61,7 +61,7 @@ $date = $_POST['field-date'];
 
 $user = 'u52888'; // Заменить на ваш логин uXXXXX
 $pass = '7446676'; // Заменить на пароль, такой же, как от SSH
-$db = new PDO('mysql:host=localhost;dbname=7446676', $user, $pass,
+$db = new PDO('mysql:host=localhost;dbname=u52888', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
 
 // Подготовленный запрос. Не именованные метки.
@@ -83,7 +83,7 @@ try {
   $biography = $_POST['biography'];
 
   $stmt->execute();
-  $dbh = new PDO('mysql:host=localhost;dbname=u53712', $user, $pass);
+  $dbh = new PDO('mysql:host=localhost;dbname=u52888', $user, $pass);
   $last_id = $db->lastInsertId();
 
   $stmt = $db->prepare("INSERT INTO abilities (id, $abil) VALUES (:id, 1)");
